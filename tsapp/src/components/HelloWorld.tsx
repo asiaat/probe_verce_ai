@@ -1,9 +1,11 @@
 // src/components/HelloWorld.tsx
 
 import React, { useState } from 'react';
+import { useChat } from 'ai/react';
 
 const HelloWorld: React.FC = () => {
   const [name, setName] = useState<string>('World');
+  const { messages, input, handleInputChange, handleSubmit } = useChat();
 
   const handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     setName(event.target.value);
@@ -11,7 +13,7 @@ const HelloWorld: React.FC = () => {
 
   return (
     <div>
-      <h1>Hello, {name}!</h1>
+      <h1>Terekest, {name}!</h1>
       <input
         type="text"
         value={name}

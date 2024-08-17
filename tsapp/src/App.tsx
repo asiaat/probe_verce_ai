@@ -2,11 +2,12 @@
 
 import React from 'react';
 import HelloWorld from './components/HelloWorld';
+import JokeGenerator from './components/JokeGenerator';
 
 const App: React.FC = () => {
   return (
     <div>
-      <HelloWorld />
+      <JokeGenerator />
     </div>
   );
 };
